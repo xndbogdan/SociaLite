@@ -1,5 +1,49 @@
-@tailwind preflight;
+@tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
+
+@import './fonts';
+
+.source-sans * {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@responsive {
+  .bg-red-adonis {
+    background-color:#E27D60;
+  }
+  .bg-orange-adonis {
+    background-color: #E8A87C;
+  }
+  .bg-navy-adonis {
+    background-color: #85DCBF;
+  }
+  .bg-pink-adonis {
+    background-color: #C38D9E;
+  }
+  .bg-teal-adonis {
+    background-color: #41B3A3;
+  }
+
+  .text-red-adonis {
+    color:#E27D60;
+  }
+  .text-orange-adonis {
+    color: #E8A87C;
+  }
+  .text-navy-adonis {
+    color: #85DCBF;
+  }
+  .text-pink-adonis {
+    color: #C38D9E;
+  }
+  .text-teal-adonis {
+    color: #41B3A3;
+  }
+
+  .gradient-header-adonis {
+    background: linear-gradient(90deg, #E27D60 0%, #E8A87C 100%)
+  }
+}
