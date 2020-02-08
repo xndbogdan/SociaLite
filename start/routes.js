@@ -29,3 +29,5 @@ Route.get('register', 'UserController.registerForm').as('register');
 Route.post('register', 'UserController.register').as('register.attempt');
 
 Route.get('logout', 'UserController.logout').as('logout');
+
+Route.post('post', 'PostController.make').as('post.make');

@@ -1,5 +1,5 @@
 'use strict';
-const User = use('App/Models/User')
+const User = use('App/Models/User');
 
 class UserController {
 
@@ -15,7 +15,7 @@ class UserController {
     }
   }
 
-  async register ({request, auth, view}) {
+  async register ({request, auth, view, response}) {
     var datetime = new Date();
     let userData = request.only(['username', 'email', 'password'])
     userData['created_at'] = datetime.toString();

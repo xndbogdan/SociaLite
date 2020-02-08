@@ -34,6 +34,32 @@ class User extends Model {
   tokens () {
     return this.hasMany('App/Models/Token')
   }
+  /**
+   * A relationship on tokens is required for auth to
+   * work. Since features like `refreshTokens` or
+   * `rememberToken` will be saved inside the
+   * tokens table.
+   *
+   * @method posts
+   *
+   * @return {Object}
+   */
+  posts () {
+    return this.hasMany('App/Models/Post')
+  }
+  /**
+   * A relationship on tokens is required for auth to
+   * work. Since features like `refreshTokens` or
+   * `rememberToken` will be saved inside the
+   * tokens table.
+   *
+   * @method likes
+   *
+   * @return {Object}
+   */
+  likes () {
+    return this.hasMany('App/Models/Like')
+  }
 }
 
 module.exports = User

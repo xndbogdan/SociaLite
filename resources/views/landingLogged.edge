@@ -1,0 +1,61 @@
+@layout('layouts.app')
+
+@section('content')
+<div class="bg-gray-100 flex-1">
+  <div class="py-20 gradient-header-adonis" style="">
+    <div class="container mx-auto px-6 flex flex-col lg:flex-row justify-between">
+      <div>
+        <h2 class="text-2xl md:text-4xl font-bold mb-2 text-white text-center lg:text-left">
+          Latest Posts
+        </h2>
+        <h3 class="text-lg md:text-2xl mb-8 text-gray-200 text-center lg:text-left">
+          Like posts or make a new one
+        </h3>
+      </div>
+      <div>
+        <div class="w-full justify-center flex">
+          <img class="w-32" src="/user.svg"/>
+        </div>
+
+        <div class="text-white text-center">
+          {{auth.user.username}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="container mx-auto px-6 p-10">
+    <form method="post" action="{{route('post.make')}}" class="bg-white shadow-2xl rounded px-8 pt-6 pb-6 mb-12 w-full">
+      {{ csrfField() }}
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2 text-xl" for="content">
+          Content
+        </label>
+        <textarea name="content" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="content" type="textarea" placeholder="Write something clever"></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <p class="text-teal-adonis">Posting as {{auth.user.username}}</p>
+        <button type="submit" class="bg-teal-adonis hover:bg-navy-adonis text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          Post
+        </button>
+      </div>
+    </form>
+    @each(post in posts)
+    <div class="my-4 bg-white pb-2 rounded-lg">
+      <div class="flex flex-row items-center py-2 bg-teal-adonis rounded-t-lg px-2">
+        <img class="h-5 mr-2" src="/user.svg"/>
+        <p class="text-white">{{post.user.username}}</p>
+      </div>
+      <p class="text-gray-800 px-2 py-2">
+        {{post.content}}
+      </p>
+
+    </div>
+
+    @endeach
+  </section>
+
+</div>
+
+@endsection
