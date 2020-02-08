@@ -11452,6 +11452,183 @@ video {
   background: linear-gradient(90deg, #E27D60 0%, #E8A87C 100%)
 }
 
+.bg-red-adonis {
+  background-color:#E27D60;
+}
+
+.bg-orange-adonis {
+  background-color: #E8A87C;
+}
+
+.bg-navy-adonis {
+  background-color: #85DCBF;
+}
+
+.bg-pink-adonis {
+  background-color: #C38D9E;
+}
+
+.bg-teal-adonis {
+  background-color: #41B3A3;
+}
+
+.text-red-adonis {
+  color:#E27D60;
+}
+
+.text-orange-adonis {
+  color: #E8A87C;
+}
+
+.text-navy-adonis {
+  color: #85DCBF;
+}
+
+.text-pink-adonis {
+  color: #C38D9E;
+}
+
+.text-teal-adonis {
+  color: #41B3A3;
+}
+
+.gradient-header-adonis {
+  background: -webkit-gradient(linear, left top, right top, from(#E27D60), to(#E8A87C));
+  background: linear-gradient(90deg, #E27D60 0%, #E8A87C 100%)
+}
+
+.hover\:bg-red-adonis:hover {
+  background-color:#E27D60;
+}
+
+.hover\:bg-orange-adonis:hover {
+  background-color: #E8A87C;
+}
+
+.hover\:bg-navy-adonis:hover {
+  background-color: #85DCBF;
+}
+
+.hover\:bg-pink-adonis:hover {
+  background-color: #C38D9E;
+}
+
+.hover\:bg-teal-adonis:hover {
+  background-color: #41B3A3;
+}
+
+.hover\:text-red-adonis:hover {
+  color:#E27D60;
+}
+
+.hover\:text-orange-adonis:hover {
+  color: #E8A87C;
+}
+
+.hover\:text-navy-adonis:hover {
+  color: #85DCBF;
+}
+
+.hover\:text-pink-adonis:hover {
+  color: #C38D9E;
+}
+
+.hover\:text-teal-adonis:hover {
+  color: #41B3A3;
+}
+
+.hover\:gradient-header-adonis:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#E27D60), to(#E8A87C));
+  background: linear-gradient(90deg, #E27D60 0%, #E8A87C 100%)
+}
+
+.focus\:bg-red-adonis:focus {
+  background-color:#E27D60;
+}
+
+.focus\:bg-orange-adonis:focus {
+  background-color: #E8A87C;
+}
+
+.focus\:bg-navy-adonis:focus {
+  background-color: #85DCBF;
+}
+
+.focus\:bg-pink-adonis:focus {
+  background-color: #C38D9E;
+}
+
+.focus\:bg-teal-adonis:focus {
+  background-color: #41B3A3;
+}
+
+.focus\:text-red-adonis:focus {
+  color:#E27D60;
+}
+
+.focus\:text-orange-adonis:focus {
+  color: #E8A87C;
+}
+
+.focus\:text-navy-adonis:focus {
+  color: #85DCBF;
+}
+
+.focus\:text-pink-adonis:focus {
+  color: #C38D9E;
+}
+
+.focus\:text-teal-adonis:focus {
+  color: #41B3A3;
+}
+
+.focus\:gradient-header-adonis:focus {
+  background: -webkit-gradient(linear, left top, right top, from(#E27D60), to(#E8A87C));
+  background: linear-gradient(90deg, #E27D60 0%, #E8A87C 100%)
+}
+
+img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+  0% { -webkit-transform: translateY(0); transform: translateY(0);
+  }
+
+  100% { -webkit-transform: translateY(-10px); transform: translateY(-10px);
+  }
+}
+
+@keyframes mover {
+  0% { -webkit-transform: translateY(0); transform: translateY(0);
+  }
+
+  100% { -webkit-transform: translateY(-10px); transform: translateY(-10px);
+  }
+}
+
+img.vert-rotate {
+  -webkit-animation: rotator 1s infinite  alternate;
+  animation: rotator 1s infinite  alternate;
+}
+
+@-webkit-keyframes rotator {
+  0% { -webkit-transform: rotate(3deg); transform: rotate(3deg);
+  }
+
+  100% { -webkit-transform: rotate(-3deg); transform: rotate(-3deg);
+  }
+}
+
+@keyframes rotator {
+  0% { -webkit-transform: rotate(3deg); transform: rotate(3deg);
+  }
+
+  100% { -webkit-transform: rotate(-3deg); transform: rotate(-3deg);
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

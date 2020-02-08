@@ -47,3 +47,67 @@
     background: linear-gradient(90deg, #E27D60 0%, #E8A87C 100%)
   }
 }
+
+@variants hover, focus {
+  .bg-red-adonis {
+    background-color:#E27D60;
+  }
+  .bg-orange-adonis {
+    background-color: #E8A87C;
+  }
+  .bg-navy-adonis {
+    background-color: #85DCBF;
+  }
+  .bg-pink-adonis {
+    background-color: #C38D9E;
+  }
+  .bg-teal-adonis {
+    background-color: #41B3A3;
+  }
+
+  .text-red-adonis {
+    color:#E27D60;
+  }
+  .text-orange-adonis {
+    color: #E8A87C;
+  }
+  .text-navy-adonis {
+    color: #85DCBF;
+  }
+  .text-pink-adonis {
+    color: #C38D9E;
+  }
+  .text-teal-adonis {
+    color: #41B3A3;
+  }
+
+  .gradient-header-adonis {
+    background: linear-gradient(90deg, #E27D60 0%, #E8A87C 100%)
+  }
+}
+
+img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+img.vert-rotate {
+  -webkit-animation: rotator 1s infinite  alternate;
+  animation: rotator 1s infinite  alternate;
+}
+@-webkit-keyframes rotator {
+  0% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+@keyframes rotator {
+  0% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}

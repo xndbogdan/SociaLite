@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Chelnerul Online</title>
+    <title>SociaLite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     {{ style('/assets/css/app') }}
   </head>
-  <body class="source-sans">
+  <body class="source-sans flex flex-col" style="min-height: 100vh;">
     <header class="header">
       <nav class="flex items-center justify-between flex-wrap bg-teal-adonis p-6 w-full">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <span class="font-semibold text-xl tracking-tight">Chelnerul Online</span>
+          <a href="{{route('landing')}}"><span class="font-semibold text-xl tracking-tight">SociaLite</span></a>
         </div>
         <div class="block lg:hidden" onclick="toggleMenu()">
           <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
           </button>
         </div>
-        <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="mobile-menu">
+        <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:text-right" id="mobile-menu">
           <div class="text-sm lg:flex-grow">
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              Docs
-            </a>
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-              Examples
-            </a>
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-              Blog
-            </a>
+            @loggedIn
+              <a href="{{route('logout')}}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                Logout
+              </a>
+            @else
+              <a href="{{route('login')}}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                Login
+              </a>
+              <a href="/register" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                Register
+              </a>
+            @endloggedIn
           </div>
 
         </div>
       </nav>
     </header>
-    <div class="" id="app">
-      <div class="content">
+    <div class="flex flex-col flex-1" id="app">
+      <div class="content flex flex-col flex-1">
         @!section('content')
       </div>
     </div>
