@@ -49,6 +49,11 @@
 }
 
 @variants hover, focus {
+  .shadow-custom {
+    -webkit-box-shadow: 1px 3px 41px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 41px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 41px 6px rgba(0,0,0,0.75);
+  }
   .bg-red-adonis {
     background-color:#E27D60;
   }
