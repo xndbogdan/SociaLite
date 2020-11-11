@@ -2,7 +2,7 @@
 
 - Basic social networking platform using adonis js
 
-#Prerequisites
+# Prerequisites
 
 - Node
 
@@ -26,7 +26,7 @@ adonis serve
 ```
 
 
-####Recent additions:
+#### Recent additions:
 
 - CSRF protection
 - Auth system
